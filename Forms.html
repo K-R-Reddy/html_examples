@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+            td,th{
+                padding: 20px;
+            }
+            th{
+                background-color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1>Registration Form</h1>
+        <b>Fill Your Details</b><br><br>
+        <form>
+            <table border="1" style="border-collapse:collapse;">
+                <tr>
+                    <th>Full Name : </th>
+                    <td><input type="text" placeholder="Enter your full name" maxlength="50"></td>
+                </tr>
+                <tr>
+                    <th>Password : </th>
+                    <td><input type="password" placeholder="Enter your password" minlength="6" limit="10" required></td>
+                </tr>
+                <tr>
+                    <th>Age : </th>
+                    <td><input type="number" required min="1" max="100"></td>
+                </tr>
+                <tr>
+                    <th>Date of Birth : </th>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <th>Gender : </th>
+                    <td>
+                        <input type="radio" name="gender" value="male" required>Male
+                        <input type="radio" name="gender" value="female" required>Female
+                        <input type="radio" name="gender" value="other" required>Other
+                    </td>
+                </tr>
+                <tr>
+                    <th>Hobbies : </th>
+                    <td>
+                        <input type="checkbox" name="hobbies" value="playing video game">Playing Video Games<br>
+                        <input type="checkbox" name="hobbies" value="sports">Sports<br>
+                        <input type="checkbox" name="hobbies" value="reading">Reading<br>
+                        <input type="checkbox" name="hobbies" value="traveling">Traveling<br>
+                        <input type="checkbox" name="hobbies" value="other">Other<br>
+                    </td>
+                </tr>
+                <tr>
+                    <th>State : </th>
+                    <td>
+                    <select required>
+                        <option value="">Select your state</option>
+                        <option>Andhra Pradesh</option>
+                        <option>Arunachal Pradesh</option>
+                        <option>Assam</option>
+                        <option>Bihar</option>
+                        <option>Chhattisgarh</option>
+                        <option>Goa</option>
+                        <option>Gujarat</option>
+                        <option>Haryana</option>
+                        <option>Himachal Pradesh</option>
+                        <option>Jharkhand</option>
+                        <option>Karnataka</option>
+                        <option>Kerala</option>
+                        <option>Maharashtra</option>
+                        <option>Madhya Pradesh</option>
+                        <option>Manipur</option>
+                        <option>Meghalaya</option>
+                        <option>Mizoram</option>
+                        <option>Nagaland</option>
+                        <option>Odisha</option>
+                        <option>Punjab</option>
+                        <option>Rajasthan</option>
+                        <option>Sikkim</option>
+                        <option>Tamil Nadu</option>
+                        <option>Tripura</option>
+                        <option>Telangana</option>
+                        <option>Uttar Pradesh</option>
+                        <option>Uttarakhand</option>
+                        <option>West Bengal</option>
+                        <option>Andaman & Nicobar (UT)</option>
+                        <option>Chandigarh (UT)</option>
+                        <option>Dadra & Nagar Haveli and Daman & Diu (UT)</option>
+                        <option>Delhi [National Capital Territory (NCT)]</option>
+                        <option>Jammu & Kashmir (UT)</option>
+                        <option>Ladakh (UT)</option>
+                        <option>Lakshadweep (UT)</option>
+                        <option>Puducherry (UT)</option>
+                        <option>Other</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>About Yourself :</th>
+                    <td>
+                        <textarea placeholder="Write about yourself" rows="5" size="50" cols="50"></textarea>
+                    </td>
+                </tr>
+            </table><br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </center>
+    </body>
+</html>
