@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update webpage</title>
+        <script src="external1.js"></script>
+        <script>
+            function internaljs(){
+                document.getElementById("html-paragraph").innerHTML="This is Updated using internal script";
+            }
+            function alerteg(){
+                alert("This Button is Very Danger.Don't Double Click");
+            }
+            function alerteg2(){
+                alert("Your System is Hacked");
+            }
+            function example1(){
+                document.write("This code is directly written your document");
+            }
+            function example2(){
+                console.log("This is function is used to test console log element");
+            }
+        </script>
+    </head>
+    <body>
+        <p id="html-paragraph">This is a Paragarh tag. It is used to check updation of existing code using inner html</p>
+        <button onclick="internaljs()">Change the Text using internal js</button>
+        <button onclick="externaljs()">Change the Text using external js</button><br><hr>
+        <button onclick="alerteg()">Don't Press</button>
+        <button ondblclick="alerteg2()">This Button</button><br><hr>
+        <button onclick="example1()">Document</button>
+        <button onclick="example2()">console log</button>
+    </body>
+</html>
