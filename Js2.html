@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Factorial</title>
+                <script>
+                        function fact(){
+                                var n=parseInt(prompt("Enter Number to Find Factorial : "));
+                                var f=1;
+                                for(var i=1;i<=n;i++){
+                                        f=f*i;
+                                }
+                                window.alert("Factorial of "+n+" is "+f);
+                        }
+                        function palin(){
+                                var n=parseInt(prompt("Enter Number to Check Palindrome or not: "));
+                                var num=n;
+                                var rev=0;
+                                while(num>0){
+                                        rem=num%10;
+                                        rev=rev*10+rem;
+                                        num=parseInt(num/10);
+                                }
+                                if (n===rev){
+                                        window.alert(n+" is a Palindrome number");
+                                }
+                                else {
+                                        window.alert(n+" is not a Palindrome")
+                                }
+                        }
+                        function calmoney(){
+                                var m=parseInt(prompt("Enter Money : "));
+                                var money=m;
+                                var c=[0,0,0,0,0,0,0,0,0,0];
+                                var n=["2000 notes","500 notes","200 notes","100 notes","50 notes","20 notes","10 notes","5 rupee coins","2 rupee coins","1 rupee coin"];
+                                while(m>0){
+                                        if(m>=2000){
+                                                c[0]++;
+                                                m=m-2000;
+                                        }
+                                        else if(m>=500){
+                                                c[1]++;
+                                                m=m-500;
+                                        }
+                                        else if(m>=200){
+                                                c[2]++;
+                                                m=m-200;
+                                        }
+                                        else if(m>=100){
+                                                c[3]++;
+                                                m=m-100;
+                                        }
+                                        else if(m>=50){
+                                                c[4]++;
+                                                m=m-50;
+                                        }
+                                        else if(m>=20){
+                                                c[5]++;
+                                                m=m-20;
+                                        }
+                                        else if(m>=10){
+                                                c[6]++;
+                                                m=m-10;
+                                        }
+                                        else if(m>=5){
+                                                c[7]++;
+                                                m=m-5;
+                                        }
+                                        else if(m>=2){
+                                                c[8]++;
+                                                m=m-2;
+                                        }
+                                        else{
+                                                c[9]++;
+                                                m=m-1;
+                                        }
+                                }
+                           var result="To attain "+money+" rupees we requires ::<br>";
+                                for(var i=0;i<10;i++){
+                                     if(c[i]!=0){
+                                        result=result+n[i]+" : "+c[i]+"<br>";
+                                     }   
+                                }
+                                document.write(result);
+                        }
+                </script>
+        </head>
+        <body>
+                <button onclick="fact()">Find Factorial</button><br><br>
+                <button onclick="palin()">Check Palindrome</button><br><br>
+                <button onclick="calmoney()">Solve Money Problem</button>
+        </body>
+</html>
