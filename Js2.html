@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
         <head>
-                <title>Factorial</title>
+                <title>Js Functions</title>
                 <script>
                         function fact(){
                                 var n=parseInt(prompt("Enter Number to Find Factorial : "));
@@ -82,11 +82,105 @@
                                 }
                                 document.write(result);
                         }
+                        function findlarge(){
+                          var n1=parseInt(prompt("Enter Number 1 ::"));
+
+                          var n2=parseInt(prompt("Enter Number 2 ::"));
+
+                          var n3=parseInt(prompt("Enter Number 3 ::"));
+                          if(n1==n2 && n2==n3){
+                                alert("Equal numbers : "+n1);
+                          }
+                          else if(n1>n3){
+                                if(n1>n2){
+                                        alert("Largest number : "+n1);
+                                }
+                                else{
+                                        alert("Largest number : "+n2); 
+                                }
+                          }
+                          else{
+                                if(n3>n2){
+                                        alert("Largest number : "+n3);
+                                }
+                                else{
+                                        alert("Largest number : "+n2); 
+                                }
+                          }
+                        }
+                        function findWeekday(){
+                                var num=parseInt(prompt("Enter Number to Find Weekday :: "));
+                                num=num%7;
+                                switch(num){
+                                        case 0 : alert("Hoorey ! This is Sunday");break;
+                                        case 1 : alert("First day of the week! Monday");break;
+                                        case 2 : alert("Second day of the week! Tuesday");break;
+                                        case 3 : alert("Middle of the week! Wednesday");break;
+                                        case 4 : alert("Middle of the week! Thursday");break;
+                                        case 5 : alert("Weekend! Friday");break;
+                                        case 6 : alert("Hoorey Weekend! Saturday");break;
+                                        default: alert("Enter a Vaild Number");
+                                }
+                        }
+                        function forloop(){
+                                var num="";
+                                for(let i=1;i<11;i++){
+                                     num=num+" "+i;
+                                }
+                                document.getElementById("reply").innerHTML=num+" using For Loop";
+                        }
+                        function whileloop(){
+                                var num="";
+                                let i=1;
+                                while(i<=10){
+                                     num=num+" "+i;
+                                     i++;
+                                }
+                                document.getElementById("reply").innerHTML=num+" using While Loop";
+                        }
+                        function dowhileloop(){
+                                var num="";
+                                let i=0;
+                                do{
+                                     i++;
+                                     num=num+" "+i;
+                                }while(i<10);
+                                document.getElementById("reply").innerHTML=num+" using Do While Loop";
+                        }
+                        function findArmstrong(){
+                                var num=parseInt("Enter a Number to Check Armstrong or not :: ");
+                                let count=0;
+                                let n=num;
+                                let rem,sum=0;
+                                while(n>0){
+                                        count++;
+                                        n/=10;
+                                }
+                                n=num;
+                                while(n>0){
+                                     rem=n%10;
+                                     sum+=Math.pow(rem,count);
+                                     n=n/10;   
+                                }
+                                if(sum==num){
+                                        alert(num+" is a Armstrong Number.");
+                                }
+                                else{
+                                        alert(num+" is not a Armstrong Number.");
+                                }
+                        }
                 </script>
         </head>
         <body>
                 <button onclick="fact()">Find Factorial</button><br><br>
                 <button onclick="palin()">Check Palindrome</button><br><br>
-                <button onclick="calmoney()">Solve Money Problem</button>
+                <button onclick="calmoney()">Solve Money Problem</button><br><br>
+                <button onclick="findlarge()">Find Largest of Three Numbers</button><br><br>
+                <button onclick="findWeekday()">Find weekday</button><br><br>
+                <button onclick="findArmstrong()">Check Armstrong</button><br><br>
+                <button onclick="forloop()">For Loop</button>
+                <button onclick="whileloop()">While Loop</button>
+                <button onclick="dowhileloop()">Do While Loop</button><br>
+                <b><p id="reply">Click button to print first 10 numbers using different Loops</p></b>
         </body>
 </html>
